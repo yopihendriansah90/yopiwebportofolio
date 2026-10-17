@@ -46,3 +46,4 @@ Tidak memerlukan npm install atau build. HTML, CSS, dan JavaScript dapat diedit 
 Paket ini adalah seluruh proyek replika statis yang dibuat dari tampilan publik https://tamalsen.dev/ pada 17 Oktober 2026. Ini bukan source code backend WordPress, database, atau dashboard Elementor. Tautan sosial dan situs proyek eksternal tetap menuju tujuan aslinya. Konten, branding, dan atribusi pemilik asli tetap disertakan. Analytics pihak ketiga telah dihapus.
 
 Pemeriksaan tautan internal, aset langsung, dan sintaks JavaScript telah lolos. Perbandingan visual 1:1 lewat browser belum dilakukan.
+# yopiwebportofolio
