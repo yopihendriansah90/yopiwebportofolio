@@ -15,3 +15,13 @@
 .branding .for-onepage {
   width: 240px;
 }
+
+/* Hero title: two readable lines without the pointer ring over the content. */
+#top-heading-name h1 {
+  font-size: clamp(58px, 8vw, 110px) !important;
+  line-height: .92 !important;
+}
+
+.circle-cursor {
+  display: none !important;
+}

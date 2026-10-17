@@ -74,6 +74,53 @@
       ]
     }
   ],
+  "partners": [
+    {
+      "name": "Featured.com",
+      "image": "/wp-content/uploads/2024/12/featured.com-logo.svg",
+      "url": "https://blog.featured.com/what-should-be-in-a-portfolio-for-web-developer/"
+    },
+    {
+      "name": "Hostinger",
+      "image": "/wp-content/uploads/2024/12/hostinger-logo.svg",
+      "url": "https://www.hostinger.com/tutorials/web-developer-portfolio"
+    },
+    {
+      "name": "Upwork",
+      "image": "/wp-content/uploads/2024/12/upwork-logo.svg",
+      "url": "https://www.upwork.com/resources/web-developer-portfolio-examples"
+    },
+    {
+      "name": "CareerFoundry",
+      "image": "/wp-content/uploads/2024/12/careerfoundry-logo.svg",
+      "url": "https://careerfoundry.com/en/blog/web-development/software-engineer-portfolio/"
+    },
+    {
+      "name": "Frontend Mentor",
+      "image": "/wp-content/uploads/2024/12/frontend-mentor-logo.svg",
+      "url": "https://www.frontendmentor.io/articles/building-an-effective-frontend-developer-portfolio--7cE8BfMG_"
+    },
+    {
+      "name": "WeAreDevelopers",
+      "image": "/wp-content/uploads/2024/12/WeAreDevelopers-logo.svg",
+      "url": "https://www.wearedevelopers.com/magazine/web-developer-portfolio-examples"
+    },
+    {
+      "name": "Colorlib",
+      "image": "/wp-content/uploads/2024/12/colorlib-logo.svg",
+      "url": "https://colorlib.com/wp/developer-portfolios/"
+    },
+    {
+      "name": "Masai School",
+      "image": "/wp-content/uploads/2024/12/masai-logo.svg",
+      "url": "https://www.masaischool.com/blog/10-web-developer-portfolio-examples-to-get-inspired/"
+    },
+    {
+      "name": "Blog du Webdesign",
+      "image": "/wp-content/uploads/2024/12/logo-bdwd.png",
+      "url": "https://www.blogduwebdesign.com/blog/graphisme/inspiration-graphique/portfolios-developpeurs.html"
+    }
+  ],
   "testimonials": [
     {
       "author": "jono",

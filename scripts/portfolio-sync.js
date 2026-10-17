@@ -15,6 +15,12 @@
     }[category] || category || "Project";
   }
 
+  function twoLineName(value) {
+    var parts = String(value || "").trim().split(/\s+/);
+    if (parts.length < 2) return escapeHtml(value);
+    return escapeHtml(parts.shift()) + "<br>" + escapeHtml(parts.join(" "));
+  }
+
   function projectCard(item, index) {
     var title = escapeHtml(item.title || "Untitled project");
     var image = escapeHtml(item.image || "");
@@ -32,12 +38,31 @@
       '</div></div></div></div>';
   }
 
+  function featuredSlide(item) {
+    var name = escapeHtml(item.name || "Partner logo");
+    var image = escapeHtml(item.image || "");
+    var url = escapeHtml(item.url || "#");
+    return '<div class="swiper-slide"><a href="' + url + '" target="_blank" rel="nofollow"><div class="elementor-carousel-image swiper-lazy" role="img" aria-label="' + name + '" data-background="' + image + '"><div class="swiper-lazy-preloader"></div></div></a></div>';
+  }
+
   function apply(data) {
     var profile = data.profile || {};
     var name = document.querySelector("#top-heading-name h1");
     var role = document.querySelector("#hero-section h5");
-    if (profile.name && name) name.textContent = profile.name;
+    if (profile.name && name) name.innerHTML = twoLineName(profile.name);
     if (profile.role && role) role.textContent = profile.role;
+
+    var partners = Array.isArray(data.partners) ? data.partners : data.featured;
+    if (Array.isArray(partners) && partners.length) {
+      var featuredWrapper = document.querySelector("#as-featured-in_carousel .swiper-wrapper");
+      if (featuredWrapper) {
+        featuredWrapper.innerHTML = partners.map(featuredSlide).join("");
+        var featuredHeading = document.querySelector("#as-featured-in-text .elementor-heading-title");
+        if (featuredHeading) featuredHeading.textContent = "Companies I've Worked With";
+        var swiper = featuredWrapper.closest(".swiper") && featuredWrapper.closest(".swiper").swiper;
+        if (swiper && typeof swiper.update === "function") swiper.update();
+      }
+    }
 
     var email = document.querySelector('#contact a[href*="email-protection"]');
     if (profile.email && email) {
@@ -84,7 +109,7 @@
   function installMobileOverflowFix() {
     var style = document.createElement("style");
     style.setAttribute("data-portfolio-mobile-fix", "true");
-    style.textContent = "@media (max-width: 1280px) { #content > .elementor { box-sizing: border-box; width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; } #content .elementor-section { box-sizing: border-box; max-width: 100%; } #content .elementor-section > .elementor-container { max-width: 100%; } }";
+    style.textContent = "#top-heading-name h1 { font-size: clamp(58px, 8vw, 110px) !important; line-height: .92 !important; } .circle-cursor { display: none !important; } @media (max-width: 1280px) { #content > .elementor { box-sizing: border-box; width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; } #content .elementor-section { box-sizing: border-box; max-width: 100%; } #content .elementor-section > .elementor-container { max-width: 100%; } }";
     document.head.appendChild(style);
   }
 
