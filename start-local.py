@@ -1,4 +1,4 @@
-"""Local preview server and editor API for the portfolio project."""
+"""Local portfolio server and dashboard editor API."""
 
 from __future__ import annotations
 
@@ -19,6 +19,9 @@ DIST = ROOT / "dist"
 DASHBOARD = ROOT / "dashboard"
 DATA_DIR = ROOT / "data"
 DATA_FILE = DATA_DIR / "portfolio.json"
+FRONTEND_DATA_FILE = DIST / "data" / "portfolio.json"
+SYNC_SOURCE = ROOT / "scripts" / "portfolio-sync.js"
+SYNC_TARGET = DIST / "portfolio-sync.js"
 UPLOAD_DIR = DIST / "wp-content" / "uploads" / "portfolio"
 MAX_JSON_BYTES = 2 * 1024 * 1024
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
@@ -40,6 +43,20 @@ def ensure_project_dirs() -> None:
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     if not DATA_FILE.exists():
         atomic_write_json(DATA_FILE, {"profile": {}, "projects": [], "experience": [], "testimonials": []})
+    sync_frontend(json.loads(DATA_FILE.read_text(encoding="utf-8")))
+
+
+def sync_frontend(value: object) -> None:
+    """Copy dashboard data and the content-only sync script into the deployable site."""
+    atomic_write_json(FRONTEND_DATA_FILE, value)
+    if SYNC_SOURCE.exists():
+        SYNC_TARGET.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(SYNC_SOURCE, SYNC_TARGET)
+    homepage = DIST / "index.html"
+    html = homepage.read_text(encoding="utf-8")
+    tag = '<script src="/portfolio-sync.js"></script>'
+    if tag not in html:
+        homepage.write_text(html.replace("</body>", f"{tag}</body>"), encoding="utf-8")
 
 
 def safe_filename(filename: str) -> str:
@@ -111,7 +128,8 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
                 if not isinstance(value, dict):
                     raise ValueError("Data utama harus berupa object JSON.")
                 atomic_write_json(DATA_FILE, value)
-                self._send_json({"ok": True, "message": "Data berhasil disimpan."})
+                sync_frontend(value)
+                self._send_json({"ok": True, "message": "Data tersimpan dan website utama diperbarui."})
             except (UnicodeDecodeError, json.JSONDecodeError, ValueError) as exc:
                 self._send_error_json(f"JSON tidak valid: {exc}")
             except OSError as exc:

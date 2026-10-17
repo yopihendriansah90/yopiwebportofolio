@@ -1,0 +1,17 @@
+/* Portfolio navbar wordmark: keep the original header layout, but use the full logo width. */
+.branding .logo img.main-logo,
+.branding .logo img.dark-scheme-logo,
+.branding .fixed-logo img,
+.branding .for-onepage img {
+  width: 240px !important;
+  height: auto !important;
+  max-width: 240px !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+
+.branding .logo,
+.branding .fixed-logo,
+.branding .for-onepage {
+  width: 240px;
+}

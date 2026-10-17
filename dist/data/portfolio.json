@@ -1,0 +1,94 @@
+{
+  "profile": {
+    "name": "Yopi Hendriansah",
+    "role": "Web Developer",
+    "location": "Tasikmalay",
+    "email": "yopi@mail.com",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
+  },
+  "projects": [
+    {
+      "title": "mobil",
+      "category": "web-dev",
+      "tech": [
+        "laravle"
+      ],
+      "summary": "aini deskri",
+      "url": "https://google.com",
+      "image": "/wp-content/uploads/portfolio/kidma-umrah-journey-storyboard-14a66313.png",
+      "featured": false
+    },
+    {
+      "title": "Project we dev",
+      "category": "web-dev",
+      "tech": [
+        "html",
+        "css",
+        "javascript"
+      ],
+      "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+      "url": "https://walatraherbal.com/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f?wsidchk=7314539&pdata=https%253A%252F%252Fwalatraherbal.com%252Ftentang_kami&id=7fa3b767c460b54a2be4d49030b349c7&ts=1749928771",
+      "image": "/wp-content/uploads/portfolio/screenshot-from-2026-10-16-16-28-12-8876597d.png",
+      "featured": false
+    },
+    {
+      "title": "APlikasi toko online",
+      "category": "app",
+      "tech": [
+        "flutter"
+      ],
+      "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+      "url": "https://test.walatraherbal.com/",
+      "image": "/wp-content/uploads/portfolio/screenshot-from-2026-10-15-13-49-11-4422f69f.png",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "role": "Web Developer",
+      "company": "CV. Walatra Herbal",
+      "period": "2025 - Sekarang",
+      "location": "Onsite",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+      "skills": [
+        "Html",
+        "Css",
+        "Javascript",
+        "Tailwinds",
+        "Laravel",
+        "Filament",
+        "Mysql",
+        "Linux Server"
+      ]
+    },
+    {
+      "role": "Admin Operasional",
+      "company": "PT. Manunggal Jaya Makmur",
+      "period": "2022 - 2025",
+      "location": "OnSite",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+      "skills": [
+        "exce",
+        "msword",
+        "spreadsheet"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "jono",
+      "role": "jono Corp",
+      "quote": "Kerjaannya bagus rapih dan orang nya menyenangkan"
+    },
+    {
+      "author": "Doni",
+      "role": "CV. Tesindo",
+      "quote": "Projectnya cepat selesai dan akurat serata setabil"
+    },
+    {
+      "author": "Mantapunya",
+      "role": "mantapwlah",
+      "quote": "pokonya mantap"
+    }
+  ]
+}

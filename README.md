@@ -15,7 +15,9 @@
 4. Buka http://localhost:8080 di browser.
 5. Edit file, simpan, lalu refresh browser.
 
-Dashboard lokal tersedia di http://localhost:8080/dashboard/. Dashboard ini dapat membaca dan menyimpan `data/portfolio.json` serta mengunggah gambar ke `dist/wp-content/uploads/portfolio/`. Perubahan gambar dan data tetap perlu di-commit dan di-push ke GitHub agar masuk ke deployment Cloudflare Pages.
+Dashboard lokal tersedia di http://localhost:8080/dashboard/. Pada layar mobile, navigasi berada di bagian bawah seperti aplikasi native. Dashboard dapat membaca dan menyimpan `data/portfolio.json` serta mengunggah gambar ke `dist/wp-content/uploads/portfolio/`.
+
+Setiap kali data disimpan, konfigurasi langsung diterapkan ke halaman utama di `dist/index.html` melalui script sinkronisasi. Buka http://localhost:8080/ untuk melihat perubahan. Struktur HTML, CSS, layout, dan animasi portfolio asli tetap dipertahankan; yang diperbarui hanya konten teks dan gambar.
 
 Alternatif dari terminal di folder proyek:
 
@@ -35,6 +37,7 @@ Gunakan server lokal karena URL aset dimulai dari root `/`. Membuka index.html d
 - dist/external/ — salinan font dan dependensi eksternal.
 - dashboard/index.html — dashboard editor lokal.
 - data/portfolio.json — file data portfolio yang diedit dashboard.
+- scripts/portfolio-sync.js — sinkronisasi konten dashboard ke frontend utama.
 
 Tidak memerlukan npm install atau build. HTML, CSS, dan JavaScript dapat diedit langsung. Beberapa berkas asli sudah diminifikasi; gunakan fitur Format Document pada editor agar lebih mudah dibaca. Untuk mengganti gambar, pertahankan nama dan jalurnya atau ubah referensinya di HTML/CSS.
 
